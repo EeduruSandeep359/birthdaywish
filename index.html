@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travelled Image Gallary </title>
+    <link rel="stylesheet" href="./gallary.css">
+    <script src="./gallary.js" defer></script>
+</head>
+<body onload="images()">
+    <!-- <img src="./tree-736877_640.jpg" alt=""> -->
+    <div id="pics">
+        <h1 id="hading">Happy B'day to you Anu</h1>
+    </div>
+    <div id="v10">
+        <video  id="v1" aria-label="no" src="./anump410.mp4" autoplay muted loop controls></video>
+    </div>
+    <div id="bigscreen" class="fullscreenImag" style="display: none;" ondblclick="pausesong()">
+        <img alt="no" src="./bird-1045954_640.jpg" id="fullImag">
+        <h1 id="imgHeading">Heading</h1>
+        <p id="imgPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Accusamus rem hic sunt dolor esse qui et quisquam harum laborum nostrum.</p>
+      </div>
+<!-- //from here gallary code stars -->
+    <div class="bodyGallary">
+      <img src="./countdown-3133_128.gif"        alt="no" onclick="playsong(this.src,'happy Birthy day to you Anu','many more happy returns of the day to my beatifull baby')">
+      <img src="./happy-birthday-669968_640.jpg" alt="no" onclick="playsong(this.src,'Happy birth day mummy','Stay happy your all dreams come true  may god bless you')">
+      <img src="./anu5.jpg"    alt="no"  onclick="playsong(this.src,'keep smiling the way U do ','you are the most precious oyster..i have ever found in my life ..a very very happy birthday anu..!!')">
+      <img src="./anu15.jpg"   alt="no"  onclick="playsong(this.src,'my special one','thank you for making ,my heart smile & my eyes shine and for being my best one..! i luv u forever & ever..')">
+      <img src="./anu6.jpg"    alt="no"  onclick="playsong(this.src,'happy Birthy day to you Anu','many more happy returns of the day to my beatifull baby')" >
+      <img src="./anu4.jpg"    alt="no"  onclick="playsong(this.src,'Happy birth day mummy','Stay happy your all dreams come true  may god bless you..you are the one i text first as soon as i wake up and the last before i fall a sleep.. ')" >
+      <img src="./anu7.jpg"    alt="no"  onclick="playsong(this.src,'keep smiling the way U do ','you are the most precious oyster..i have ever found in my life ..a very very happy birthday anu..!!')">
+      <img src="./anu12.jpg"   alt="no"  onclick="playsong(this.src,'my special one','thank you for making ,my heart smile & my eyes shine and for being my best one..! i luv u forever & ever.. you appear in my mind whenever iam happy, sad or even bored. So donnot ever thik of distancing your self from me..')">
+      <img src="./anu14.jpg"   alt="no"  onclick="playsong(this.src,'Happy birth day mummy','Stay happy your all dreams come true  may god bless you')">
+      <img src="./anu8.jpg"    alt="no"  onclick="playsong(this.src,'happy Birthy day to you Anu','many more happy returns of the day to my beatifull baby')" id="m8">
+      <!-- <audio src="./oo rendu song.mp3"></audio> -->
+    </div>
+  <script>
+    let audio1 = new Audio()
+    audio1.src = './oo rendu song.mp3';
+
+    const playsong = (pic,heading,discription) =>{
+        audio1.play()
+        document.getElementById("bigscreen").removeAttribute("style")
+    document.getElementById("imgHeading").innerHTML=heading;
+    document.getElementById("imgPara").innerHTML=discription;
+    bigscreen.style.display="flex"
+    fullImag.src=pic
+
+    document.getElementById("v10").setAttribute("style","display:none;")
+   
+
+
+    }
+
+    const pausesong = () =>{
+        audio1.pause()
+        document.getElementById("bigscreen").setAttribute("style","display:none")
+
+        document.getElementById("v10").removeAttribute("style")
+
+    }
+    </script>
+</body>
+</html>
